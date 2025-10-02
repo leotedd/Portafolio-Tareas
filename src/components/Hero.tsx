@@ -3,23 +3,37 @@ import "./styles/Hero.css";
 
 export default function Hero() {
   return (
-    <section className="hero">
-      <div className="container hero-inner">
-        <div>
-          <p className="pill">Portafolio de Tareas · Desarrollo Web</p>
-          <h1 className="title">Hola, soy <span className="highlight">Teddy</span> 👋</h1>
-          <p className="subtitle">
-            Estudiante de Ingeniería en Sistemas (UMG). Desarrollo Web con React + TypeScript,
-            modelado de bases de datos y prototipos con Arduino.
+    <header className="hero-nemo">
+      <div className="container hero-grid">
+        {/* Copy */}
+        <div className="hero-copy">
+          <p className="top-pill">Desarrollo Web • Bases de Datos • Arduino</p>
+          <h1 className="hero-title">
+            Hello, It’s Me <span>Teddy</span>
+          </h1>
+          <p className="hero-sub">
+            Estudiante de Ingeniería en Sistemas (UMG). Creo interfaces limpias,
+            organizo datos con ER/SQL y despliego proyectos en Vercel/Netlify/GitHub Pages.
           </p>
-          <div className="cta-row">
-            <Link to="/proyectos" className="btn btn-primary">📂 Ver Tareas & Proyectos</Link>
-            <Link to="/contacto" className="btn btn-outline-light">✉️ Contacto</Link>
+
+          <div className="hero-actions">
+            <Link to="/proyectos" className="btn btn-accent">🚀 Ver Portafolio</Link>
+            <Link to="/contacto" className="btn btn-ghost">✉️ Contacto</Link>
+          </div>
+
+          <div className="hero-social">
+            <a href="https://github.com/leotedd" target="_blank" rel="noreferrer">GitHub</a>
+            <span>·</span>
+            <a href="mailto:teddy.hernandezp02@gmail.com">Email</a>
           </div>
         </div>
 
-        <img className="hero-avatar" src="/assets/perfil.jpg" alt="Foto de perfil" />
+        {/* Avatar */}
+        <div className="hero-avatar-wrap">
+          <img src="/assets/perfil.jpg" alt="Teddy" />
+          <div className="ring"></div>
+        </div>
       </div>
-    </section>
+    </header>
   );
 }

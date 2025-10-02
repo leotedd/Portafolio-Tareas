@@ -1,0 +1,36 @@
+:root{
+  --bg-1:#0f1720;      /* fondo general */
+  --bg-2:#111b25;      /* tarjetas / nav */
+  --fg-1:#eef3f8;      /* texto principal */
+  --fg-2:#b7c7da;      /* texto secundario */
+  --accent:#ff7a00;    /* naranja */
+  --accent-2:#ffa45e;  /* naranja claro */
+}
+
+/* Base */
+html, body, #root {height:100%}
+body{margin:0;background:var(--bg-1);color:var(--fg-1);
+  font-family:system-ui, Inter, Segoe UI, Roboto, Arial}
+a{color:var(--accent-2);text-decoration:none}
+.container{max-width:1080px;margin:0 auto;padding:0 16px}
+
+/* Botones */
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:10px 16px;border-radius:999px;border:1px solid transparent;
+  font-weight:600;cursor:pointer;transition:all .2s ease
+}
+.btn-accent{background:var(--accent);color:#1a120b}
+.btn-accent:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(255,122,0,.18)}
+.btn-ghost{border-color:#ffffff25;color:var(--fg-1)}
+.btn-ghost:hover{background:#ffffff10}
+
+/* Tarjetas */
+.card{
+  background:var(--bg-2);border:1px solid #ffffff10;border-radius:14px;
+  box-shadow:0 8px 24px rgba(0,0,0,.25)
+}
+
+/* Títulos de sección */
+.section-title{font-size:clamp(28px,3.8vw,40px);margin:0 0 6px}
+.section-sub{color:var(--fg-2);margin:0 0 18px}
