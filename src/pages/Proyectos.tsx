@@ -1,27 +1,68 @@
-import CardProyecto from "../components/CardProyecto";
+import { Link } from "react-router-dom";
+import "./styles/Proyectos.css";
 import { proyectos } from "../data/proyectos";
 
-export default function Proyectos() {
+type Proyecto = {
+  titulo: string;
+  descripcion: string;
+  imagen: string;
+  repo?: string;
+  despliegue?: string;
+  tarea?: string;
+};
+
+const Proyectos: React.FC = () => {
   return (
-    <section className="container" style={{ padding: "28px 0 40px" }}>
-      <h2 style={{ color: "#eaf1f9", marginBottom: 14 }}>Tareas y Proyectos</h2>
-      <p style={{ color: "#cfe2ff", marginBottom: 20 }}>
+    <div className="projects-container">
+      <h1 className="projects-title">Tareas y Proyectos</h1>
+      <p className="projects-subtitle">
         Selección de trabajos con breve descripción y enlaces a su repositorio y/o despliegue.
       </p>
 
-      <div className="grid">
-        {proyectos.map((p, idx) => (
-          <CardProyecto
-            key={idx}
-            imagen={p.imagen}
-            titulo={p.titulo}
-            descripcion={p.descripcion}
-            repo={p.repo}
-            despliegue={p.despliegue}
-            tarea={p.tarea}
-          />
+      <div className="projects-grid">
+        {proyectos.map((proyecto: Proyecto, index: number) => (
+          <div key={index} className="project-card">
+            <img 
+              src={proyecto.imagen} 
+              alt={proyecto.titulo}
+              className="project-image"
+            />
+            <div className="project-content">
+              <h2>{proyecto.titulo}</h2>
+              <p>{proyecto.descripcion}</p>
+              <div className="project-actions">
+                {proyecto.repo && (
+                  <a 
+                    href={proyecto.repo} 
+                    className="btn btn-secondary" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    💻 Ver Repositorio
+                  </a>
+                )}
+                {proyecto.despliegue && (
+                  <a 
+                    href={proyecto.despliegue} 
+                    className="btn btn-primary" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    🚀 Ver Despliegue
+                  </a>
+                )}
+                {proyecto.tarea && (
+                  <Link to={proyecto.tarea} className="btn btn-primary">
+                    📚 Ver Tarea
+                  </Link>
+                )}
+              </div>
+            </div>
+          </div>
         ))}
       </div>
-    </section>
+    </div>
   );
-}
+};
+
+export default Proyectos;

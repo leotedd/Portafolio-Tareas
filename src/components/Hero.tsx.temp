@@ -9,29 +9,34 @@ export default function Hero() {
         <div className="hero-copy">
           <p className="top-pill">Desarrollo Web • Bases de Datos • Arduino</p>
           <h1 className="hero-title">
-            Hello, It’s Me <span>Teddy</span>
+            Hola, soy <span>Teddy Hernández</span>
           </h1>
           <p className="hero-sub">
-            Estudiante de Ingeniería en Sistemas (UMG). Creo interfaces limpias,
-            organizo datos con ER/SQL y despliego proyectos en Vercel/Netlify/GitHub Pages.
+            Desarrollador Web y estudiante de Ingeniería en Sistemas en UMG.
+            Me especializo en crear interfaces modernas con React y TypeScript,
+            diseño de bases de datos relacionales y desarrollo de soluciones tecnológicas innovadoras.
           </p>
 
           <div className="hero-actions">
-            <Link to="/proyectos" className="btn btn-accent">🚀 Ver Portafolio</Link>
-            <Link to="/contacto" className="btn btn-ghost">✉️ Contacto</Link>
+            <Link to="/proyectos" className="btn btn-accent">📂 Ver Proyectos</Link>
+            <Link to="/contacto" className="btn btn-ghost">📧 Contacto</Link>
           </div>
 
           <div className="hero-social">
-            <a href="https://github.com/leotedd" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://github.com/leotedd" target="_blank" rel="noreferrer">
+              <i className="fab fa-github"></i> GitHub
+            </a>
             <span>·</span>
-            <a href="mailto:teddy.hernandezp02@gmail.com">Email</a>
+            <a href="mailto:teddy.hernandezp02@gmail.com">
+              <i className="fas fa-envelope"></i> Correo
+            </a>
           </div>
         </div>
 
         {/* Avatar */}
         <div className="hero-avatar-wrap">
           <img 
-            src="/perfil.jpg" 
+            src="../assets/perfil.jpg"
             alt="Teddy Hernández - Ingeniero en Sistemas" 
             className="profile-image" 
           />

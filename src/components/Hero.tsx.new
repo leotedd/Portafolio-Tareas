@@ -1,0 +1,44 @@
+import { Link } from "react-router-dom";
+import "./styles/Hero.css";
+
+export default function Hero() {
+  return (
+    <header className="hero-nemo">
+      <div className="container hero-grid">
+        {/* Copy */}
+        <div className="hero-copy">
+          <p className="top-pill">Desarrollo Web • Bases de Datos • Arduino</p>
+          <h1 className="hero-title">
+            Hola, soy <span>Teddy Hernández</span>
+          </h1>
+          <p className="hero-sub">
+            Desarrollador web y estudiante de Ingeniería en Sistemas en la Universidad Mariano Gálvez.
+            Me especializo en crear interfaces web modernas usando React y TypeScript, diseño de bases 
+            de datos relacionales, y desarrollo de soluciones tecnológicas innovadoras.
+          </p>
+
+          <div className="hero-actions">
+            <Link to="/proyectos" className="btn btn-accent">📂 Ver Proyectos</Link>
+            <Link to="/contacto" className="btn btn-ghost">📧 Contacto</Link>
+          </div>
+
+          <div className="hero-social">
+            <a href="https://github.com/leotedd" target="_blank" rel="noreferrer">
+              <i className="fab fa-github"></i> GitHub
+            </a>
+            <span>·</span>
+            <a href="mailto:teddy.hernandezp02@gmail.com">
+              <i className="fas fa-envelope"></i> Correo Electrónico
+            </a>
+          </div>
+        </div>
+
+        {/* Avatar */}
+        <div className="hero-avatar-wrap">
+          <img src="/src/assets/perfil.jpg" alt="Teddy Hernández - Desarrollador Web" className="profile-image" />
+          <div className="ring"></div>
+        </div>
+      </div>
+    </header>
+  );
+}
