@@ -31,6 +31,12 @@ export const proyectos: Proyecto[] = [
     tarea: "/glosario"
   },
   {
+    titulo: "Investigación Desarrollo Web",
+    descripcion: "Documento de investigación sobre tecnologías y conceptos fundamentales del desarrollo web moderno.",
+    imagen: "/assets/proyectos/glosario.png",
+    tarea: "/docs/Desarrollo Web .pdf"
+  },
+  {
     titulo: "Diseño Web Responsivo",
     descripcion: 
       "Proyecto de diseño web adaptable utilizando HTML5, CSS3 y técnicas modernas de diseño responsivo para una experiencia óptima en todos los dispositivos.",
